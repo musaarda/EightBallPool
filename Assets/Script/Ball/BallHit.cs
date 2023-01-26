@@ -28,7 +28,7 @@ public class BallHit : MonoBehaviour
     private void AddForceToRigidbody()
     {
         // direction vector
-        Vector3 direction = new Vector3(1f, 0f, 0f);
+        Vector3 direction = new Vector3(1f, -0.1f, 0f);
         rb.AddForce(direction * impulse, ForceMode.Impulse);
     }
 }
