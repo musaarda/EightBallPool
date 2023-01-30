@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Enums;
+using Utils;
 
 /// <summary>
 /// CueTip class is responsible for collision detection with the Cue Ball.
@@ -18,9 +20,16 @@ public class CueTip : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        // Catch the collision with the ball
-        Debug.Log("Cue is Triggered");
-        parent.gameObject.SetActive(false);
+        // check if the colliding object is a ball
+        if (MiscUtils.TagComparer(other.gameObject, TagsEnum.Ball))
+        {
+            // Catch the collision with the White ball
+            if (BallUtils.GetBallNumber(other.gameObject) == BallNumbersEnum.White)
+            {
+                Debug.Log("Cue is Triggered");
+                parent.gameObject.SetActive(false);
+            }
+        }
     }
 
 }

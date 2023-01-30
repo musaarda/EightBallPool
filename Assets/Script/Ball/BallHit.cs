@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Enums;
+using Utils;
 
 /// <summary>
 /// BallHit is responsible for moving the Cue Ball (0) by Rigidbody.AddForce()
 /// </summary>
+[RequireComponent(typeof(Rigidbody))]
 public class BallHit : MonoBehaviour
 {
 
@@ -20,8 +23,12 @@ public class BallHit : MonoBehaviour
     // Collision Trigger
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Ball is Hit by the Cue");
-        AddForceToRigidbody();
+        // check if the colliding object is the Cue
+        if (MiscUtils.TagComparer(other.gameObject, TagsEnum.Cue))
+        {
+            Debug.Log("Ball is Hit by the Cue");
+            AddForceToRigidbody();
+        }
     }
 
 

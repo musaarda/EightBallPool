@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6660407839340294559}
   m_Layer: 0
   m_Name: CueWithTrigger
-  m_TagString: Untagged
+  m_TagString: Cue
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -48,7 +48,7 @@ GameObject:
   - component: {fileID: 2901035763204459918}
   m_Layer: 0
   m_Name: Tip
-  m_TagString: Untagged
+  m_TagString: Cue
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -214,6 +214,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8023710896222376108, guid: d7913c8e8bcf14e5894228621a64096e,
+        type: 3}
+      propertyPath: m_TagString
+      value: Cue
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7913c8e8bcf14e5894228621a64096e, type: 3}
