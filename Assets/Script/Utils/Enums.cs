@@ -18,7 +18,8 @@ namespace Enums
         Player,
         GameController,
         Ball,
-        Cue
+        Cue,
+        UICamera
     }
 
     public enum BallNumbersEnum
